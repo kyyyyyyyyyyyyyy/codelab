@@ -357,9 +357,9 @@ body {
 }
 
 .hero-image {
-  width: 80%;
+  width: 70%;
   height: auto;
-  margin-left: 70px;
+  margin-left: 80px;
   object-fit: cover;
 }
 
