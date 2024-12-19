@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeLab.</title>
+    <meta
+      name="description"
+      content="Innovate your learning experience with Courselab."
+    />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/logos/favicon.svg" />
+
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- swiperjs css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- wow js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- my css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/font.css" />
+  </head>
+  <body>
+    <!-- navbar section -->
+    <nav
+      class="navbar position-absolute top-0 w-100 navbar-expand-lg py-4"
+      id="navbar"
+    >
+      <div class="container-fluid container fixed-height p-3">
+        <div class="crop-container">
+          <a class="navbar-brand" href="./index.html">
+            <img
+              src="./assets/images/logos/logo-white.svg"
+              id="logo"
+              alt="Courselab."
+            />
+          </a>
+        </div>
+        <div class="collapse navbar-collapse font-quicksand-700">
+          <ul class="navbar-nav gap-3">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/courses.html">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/mentors.html">Mentors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <a
+            href="./pages/signin.html"
+            class="btn btn-primary font-quicksand-700"
+            id="cta-nav"
+            >Get Started</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <i data-feather="menu"></i>
+          </button>
+        </div>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <div class="offcanvas-title" id="offcanvasNavbarLabel">
+              <img src="./assets/images/logos/logo.svg" />
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav justify-content-end flex-grow-1 pe-3 body-text gap-3"
+            >
+              <li class="nav-item">
+                <a class="nav-link active" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/courses.html">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/mentors.html">Mentors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/contact.html">Contact</a>
+              </li>
+              <div class="d-none align-items-center gap-3" id="cta-side">
+                <a
+                  href="./pages/signin.html"
+                  class="btn btn-primary font-quicksand-700"
+                  >Get Started</a
+                >
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="preload" class="vh-100 w-100 position-fixed active">
+      <div
+        class="h-100 w-100 bg-light-blue d-flex flex-column justify-content-center align-items-center"
+      >
+        <img src="./assets/images/logos/favicon.svg" />
+        <span class="loader"> </span>
+      </div>
+    </section>
+
+    <!-- Section Hero -->
+    <section
+      id="hero"
+      class="bg-primary px-md-0 px-3 position-relative overflow-hidden"
+    >
+      <div
+      class="container d-flex align-items-center justify-content-center pb-4"
+      >
+        <div
+          class="left-hero d-flex justify-content-center flex-column gap-3 h-100 wow bounceInUp"
+          data-wow-delay="1s"
+          data-wow-duration="1s"
+        >
+          <h1 class="font-quicksand-700 text-white">
+            Practical
+          </h1>
+          <h1 class="font-quicksand-700 text-white text-warning">Learning Solution:</h1> 
+          <h1 class="font-quicksand-700 text-white text-warning">Free Courses From Expert</h1>
+          <p class="font-body text-warning">
+            Enchane your skills with guidance from experts.
+          </p>
+          <div
+            class="position-relative d-flex align-items-center w-md-75 w-sm-100"
+          >
+            <input
+              type="text"
+              name="search"
+              class="input w-100 p-3 rounded font-body"
+              id="search"
+              placeholder="Type your course"
+            />
+            <a
+              href="./pages/courses.html"
+              class="icon-search bg-warning position-absolute me-2 end-0 p-2 rounded d-flex align-items-center justify-content-center"
+            >
+              <i data-feather="search" class="text-primary"></i>
+            </a>
+          </div>
+        </div>
+        <div
+          class="right-hero pt-5"
+        >
+          <img
+            src="./assets/images/person/image-hero.png"
+            alt="hero image"
+            class="hero-image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section proccess -->
+    <section class="bg-light-blue py-5 overflow-hidden" id="process">
+      <div
+        class="container d-flex flex-column gap-5 justify-content-center align-items-center"
+      >
+        <div class="row row-cols-1 row-cols-md-3 g-5 position-relative">
+          <div class="col wow bounceInRight center" data-wow-delay="0.0s">
+            <div class="card text-start">
+              <div class="card-icon bg-primary position-relative">
+                <i data-feather="search"></i>
+              </div>
+              <div class="card-body text-center">
+                <h5 class="text-capitalize font-quicksand-700">Find Your Solution</h5>
+                <p class="font-body">
+                  Find the best learning
+                solutions with online
+                courses led by experts
+                to enhance your skills
+                and achieve success!
+                Find your
+                solution
+                Find the best learning
+                solutions with online
+                courses led by experts
+                to enhance your skills
+                and achieve success!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col wow bounceInRight" data-wow-delay="0.4s">
+            <div class="card h-100 text-start">
+              <div class="card-icon bg-primary position-relative">
+                <i data-feather="star"></i>
+              </div>
+              <div class="card-body text-center">
+                <h5 class="text-capitalize font-quicksand-700">
+                  Best Learning Experience
+                </h5>
+                <p class="font-body">
+                  Experience the best 
+                  learning journey with 
+                  direct guidance from 
+                  experts to master your 
+                  skills.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col wow bounceInRight" data-wow-delay="0.8s">
+            <div class="card h-100 text-start">
+              <div class="card-icon bg-primary position-relative">
+                <i data-feather="monitor"></i>
+              </div>
+              <div class="card-body text-center">
+                <h5 class="text-capitalize font-quicksand-700">
+                  get certificate
+                </h5>
+                <p class="font-body">
+                  Get a certificate after completing learning at CourseLab.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section popular corse -->
+    <section class="bg-primary position-relative overflow-hidden" id="popular">
+      <div
+        id="bg-decoration"
+        class="wow fadeInLeft"
+        data-wow-delay="0.5s"
+      ></div>
+      <div
+        class="container py-5 d-flex flex-column gap-5 justify-content-center align-items-center"
+      >
+        <div
+          class="heading text-start w-100 pb-3 d-flex flex-column flex-md-row gap-3 justify-content-between align-items-center"
+        >
+          <div class="wow bounceInLeft">
+            <h2 class="font-quicksand-700 text-white text-capitalize">
+              most popular courses
+            </h2>
+            <p class="font-body text-light-blue">
+              Online education platform is very easy way to learn anything from
+              anywhere.
+            </p>
+          </div>
+          <div class="wow bounceInRight">
+            <a
+              href="./pages/courses.html"
+              class="btn btn-warning text-capitalize font-quicksand-600"
+              >see all courses</a
+            >
+          </div>
+        </div>
+        <div
+          class="row row-cols-1 row-cols-md-3 justify-content-center align-items-center w-100"
+        >
+          <div class="col wow bounceInUp center" data-wow-delay="0.05s">
+            <a href="./pages/courses/c-js.html" class="text-decoration-none">
+              <div class="card h-100">
+                <div class="card-image">
+                  <img
+                    src="./assets/images/courses/js.webp"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="material">
+                    <h5 class="font-quicksand-700 text-capitalize">
+                      JavaScript
+                    </h5>
+                    <span class="font-quicksand-600 price text-primary"
+                      >Rp. 180.000</span
+                    >
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="icon d-flex align-items-center gap-2">
+                    <i data-feather="book"></i>
+                    <p class="subject font-body">4 Material</p>
+                  </div>
+                  <div class="icon d-flex align-items-center gap-2">
+                    <i data-feather="star"></i>
+                    <p class="subject font-body">5/5</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col wow bounceInUp center" data-wow-delay="0.05s">
+            <a href="./pages/courses.html" class="text-decoration-none">
+              <div class="card h-100">
+                <div class="card-image">
+                  <img
+                    src="./assets/images/courses/html.webp"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="material">
+                    <h5 class="font-quicksand-700 text-capitalize">Figma</h5>
+                    <span class="font-quicksand-600 price text-primary"
+                      >Rp. 150.000</span
+                    >
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="icon d-flex align-items-center gap-2">
+                    <i data-feather="book"></i>
+                    <p class="subject font-body">3 Material</p>
+                  </div>
+                  <div class="icon d-flex align-items-center gap-2">
+                    <i data-feather="star"></i>
+                    <p class="subject font-body">4,7/5</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col wow bounceInUp center" data-wow-delay="0.05s">
+            <a href="./pages/courses.html" class="text-decoration-none">
+              <div class="card h-100">
+                <div class="card-image">
+                  <img
+                    src="./assets/images/courses/css.webp"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </div>
+                <div class="card-body">
+                  
+                  <div class="material">
+                    <h5 class="font-quicksand-700 text-capitalize">English</h5>
+                    <span class="font-quicksand-600 price text-primary"
+                      >Rp. 100.000</span
+                    >
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="icon d-flex align-items-center gap-2">
+                    <i data-feather="book"></i>
+                    <p class="subject font-body">6 Material</p>
+                  </div>
+                  <div class="icon d-flex align-items-center gap-2">
+                    <i data-feather="star"></i>
+                    <p class="subject font-body">4,5/5</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-primary position-relative overflow-hidden" id="popular">
+      <div
+        id="bg-decoration"
+        class="wow fadeInLeft"
+        data-wow-delay="0.5s"
+      ></div>
+      <div
+      class="container d-flex align-items-center justify-content-center pb-4"
+      >
+        <div
+          class="left-hero d-flex justify-content-center flex-column gap-3 h-100 wow bounceInUp"
+          data-wow-delay="1s"
+          data-wow-duration="1s"
+        >
+        <img
+        src="./assets/images/person/salwa2.png"
+        alt="hero image"
+        class="hero-image"
+      />
+        </div>
+        <div
+          class="right-hero pt-5"
+        >
+        <h1 class="font-quicksand-700 text-white">
+          Practical
+        </h1>
+        <h1 class="font-quicksand-700 text-white text-warning">Learning Solution:</h1> 
+        <h1 class="font-quicksand-700 text-white text-warning">Free Courses From Expert</h1>
+        <p class="font-body text-warning">
+          Enchane your skills with guidance from experts.
+        </p>
+
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget subscribe no-box">
+              <h5 class="widget-title">
+                <div class="crop-container">
+                  <img src="./assets/images/logos/logo-white.svg" alt="" />
+                </div>
+              </h5>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-700">
+                Quick Links<span></span>
+              </h5>
+              <ul class="thumbnail-widget">
+                <li>Home</li>
+                <li>Courses</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-600">
+                Contact Us<span></span>
+              </h5>
+
+              <p>
+                <a href="#" class="font-body text-decoration-none"
+                  >admin@courselab.com</a
+                >
+              </p>
+              <div
+                class="d-flex mt-2 justify-content-start align-items-center gap-3"
+              >
+                <a href="https://www.instagram.com/smkn_04kng/" class="icon-footer">
+                  <i data-feather="instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@smkn4kuningan" class="icon-footer">
+                  <i data-feather="youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center copy">
+        <p class="font-body text-white py-4">
+          Copyright CodeLab. &copy; 2024. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+  <!-- bootstrap js -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- particle js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <!-- feather icon -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+  <!-- swiperjs -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- wow js -->
+  <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
+
+  <!-- my js -->
+  <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/preload.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <script>
+    const logo = document.getElementById("logo");
+    const navbar = document.getElementById("navbar");
+
+    const scrollHandle = () => {
+      const scrolY = window.scrollY;
+
+      if (scrolY > 0) {
+        logo.src = "./assets/images/logos/logo.svg";
+        navbar.classList.add("active");
+      } else {
+        logo.src = "./assets/images/logos/logo-white.svg";
+        navbar.classList.remove("active");
+      }
+    };
+
+    window.addEventListener("scroll", scrollHandle);
+  </script>
+  <script>
+    const swiper = new Swiper(".swiper", {
+      // Optional parameters
+      // loop: true,
+
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      // If we need pagination
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</html>
